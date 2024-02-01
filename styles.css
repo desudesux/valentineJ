@@ -1,0 +1,84 @@
+body {
+    font-family: 'Lobster', cursive;
+    background-image: url('images/image.jpg'); /* Adjust the path accordingly */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 16px; /* Default font size */
+}
+.container {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust transparency as needed */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Adjust blur radius as needed */
+    padding: 20px; /* Adjust padding as needed to expand the box */
+}
+
+
+.image {
+    max-width: 100%; /* Ensure image fits container */
+}
+
+.buttons button {
+    background-color: #ff4d79;
+    color: #fff;
+    padding: 10px 20px; /* Adjusted padding for both PC and mobile */
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 1rem; /* Responsive font size */
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #7c1f37;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.hidden-message {
+    display: none;
+    margin-top: 10px;
+    font-size: 200px; /* Adjust font size */
+    color: #333; /* Adjust font color */
+}
+
+
+.move {
+    animation: moveNoMessage 0.5s linear;
+}
+
+@keyframes moveNoMessage {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(15px, 15px); }
+    50% { transform: translate(-10px, -10px); }
+    75% { transform: translate(5px, 5px); }
+    100% { transform: translate(0, 0); }
+}
+
+@media screen and (max-width: 768px) {
+    /* Media query for smaller screens (e.g., tablets and mobile devices) */
+    body {
+        font-size: 14px; /* Adjusted font size for smaller screens */
+    }
+
+    .container {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+
+    .buttons button {
+        padding: 8px 16px; /* Adjusted padding for smaller screens */
+    }
+}
